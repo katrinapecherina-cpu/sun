@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ЖК «Русское солнце» — квартиры от застройщика «Стрижи»</title>
+<meta name="description" content="ЖК «Русское солнце» на ул. Плановой, 60 в Новосибирске: шесть кирпичных домов в неорусском стиле, квартиры от 19,4 до 179,7 м², ипотека и рассрочка от застройщика «Стрижи».">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f2ea; --bg-2:#efe6d8; --card:#fffdf9; --ink:#231a15; --ink-2:#5b4d44; --muted:#8a7b70;
+  --brick:#a63f2b; --brick-d:#862f1f; --gold:#c49a52; --gold-l:#e8cf98; --line:#e2d6c4;
+  --dark:#1f1714; --radius:18px; --shadow:0 18px 50px -24px rgba(60,30,15,.35);
+  --wrap:1200px; --serif:'Cormorant Garamond',Georgia,serif; --sans:'Manrope',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 16px}
+@media(min-width:768px){.wrap{padding:0 32px}}
+section{padding:72px 0}
+@media(min-width:1024px){section{padding:110px 0}}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--brick)}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(34px,5vw,58px);margin:14px 0 18px}
+h3{font-size:28px}
+.lead{font-size:18px;color:var(--ink-2);max-width:640px}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:44px}
+.ph{display:inline-block;border:1px dashed var(--gold);color:var(--muted);border-radius:8px;padding:2px 8px;font-size:.85em;background:rgba(196,154,82,.08)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;cursor:pointer;border-radius:999px;padding:16px 28px;font-weight:600;font-size:15px;transition:transform .2s,background .2s,box-shadow .2s;white-space:nowrap}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--brick);color:#fff;box-shadow:0 12px 30px -12px rgba(166,63,43,.7)}
+.btn-primary:hover{background:var(--brick-d)}
+.btn-gold{background:var(--gold);color:var(--dark)}
+.btn-gold:hover{background:var(--gold-l)}
+.btn-ghost{background:transparent;border:1px solid currentColor}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-light{background:#fff;color:var(--ink)}
+.btn-block{width:100%}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s,color .3s;color:#fff}
+.hdr.solid{background:rgba(247,242,234,.94);backdrop-filter:blur(12px);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:24px;height:72px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:22px;font-weight:700;line-height:1}
+.logo small{display:block;font:600 10px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;opacity:.7}
+.nav{display:none;gap:20px;font-size:14px;font-weight:500;margin-left:auto;white-space:nowrap}
+.nav a{opacity:.85}.nav a:hover{opacity:1;color:var(--gold)}
+.hdr-phone{display:none;font-weight:700;font-size:15px;white-space:nowrap}
+.hdr .btn{padding:11px 20px;font-size:14px}
+.burger{margin-left:auto;width:44px;height:44px;border-radius:50%;border:1px solid currentColor;background:none;display:grid;place-items:center;cursor:pointer}
+.burger span{display:block;width:18px;height:2px;background:currentColor;box-shadow:0 -6px 0 currentColor,0 6px 0 currentColor}
+.hdr-cta{display:none}
+@media(min-width:1200px){.nav{display:flex}.burger{display:none}.hdr-phone{display:block}.hdr-cta{display:inline-flex}}
+@media(min-width:768px) and (max-width:1199px){.hdr-phone{display:block;margin-left:auto}.burger{margin-left:0}}
+.mnav{position:fixed;inset:0;z-index:60;background:var(--dark);color:#fff;padding:24px 20px;display:flex;flex-direction:column;gap:6px;transform:translateX(100%);transition:transform .35s}
+.mnav.open{transform:none}
+.mnav a{font-family:var(--serif);font-size:30px;padding:6px 0}
+.mnav .close{align-self:flex-end;background:none;border:1px solid #fff5;color:#fff;width:44px;height:44px;border-radius:50%;font-size:22px;cursor:pointer}
+.mnav .btn{margin-top:20px;font-family:var(--sans)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;padding:110px 0 40px;overflow:hidden}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,12,8,.55) 0%,rgba(20,12,8,.2) 35%,rgba(20,12,8,.8) 100%)}
+@media(min-width:768px){.hero::after{background:linear-gradient(90deg,rgba(20,12,8,.82) 0%,rgba(20,12,8,.45) 50%,rgba(20,12,8,.15) 100%),linear-gradient(180deg,rgba(20,12,8,.5) 0%,transparent 30%)}}
+.hero h1,.hero .tag{text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.hero .wrap{position:relative;z-index:2;display:grid;gap:32px;align-items:end;width:100%}
+@media(min-width:1024px){.hero .wrap{grid-template-columns:1.35fr .9fr}.hero{padding-bottom:64px}}
+.hero h1{font-size:clamp(46px,8vw,104px);font-weight:600}
+.hero h1 em{font-style:italic;color:var(--gold-l)}
+.hero .tag{font-size:clamp(17px,2vw,21px);margin:14px 0 26px;opacity:.92;max-width:560px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(8px);border-radius:999px;padding:8px 16px;font-size:14px;font-weight:500}
+.chip b{color:var(--gold-l)}
+@media(max-width:767px){.chip{font-size:13px;padding:6px 12px}.hero .eyebrow{letter-spacing:.1em;font-size:11px}.hero-ctas .btn{flex:1 1 auto;padding:15px 18px}.hero{padding-top:96px}}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-form{background:rgba(255,253,249,.97);color:var(--ink);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
+.hero-form h3{font-size:30px;margin-bottom:6px}
+.hero-form p{color:var(--ink-2);font-size:14px;margin-bottom:18px}
+.badge-sale{display:inline-block;background:var(--brick);color:#fff;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:12px}
+
+/* forms */
+.form{display:grid;gap:12px}
+.field{width:100%;border:1px solid var(--line);background:#fff;border-radius:14px;padding:16px 18px;font-size:16px;outline:none;transition:border .2s,box-shadow .2s}
+.field:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(196,154,82,.2)}
+.field.err{border-color:var(--brick);box-shadow:0 0 0 4px rgba(166,63,43,.12)}
+.agree{display:flex;gap:10px;align-items:flex-start;font-size:12px;color:var(--muted);line-height:1.45}
+.agree input{margin-top:2px;accent-color:var(--brick);width:16px;height:16px;flex:none}
+.agree a{text-decoration:underline}
+.form-ok{display:none;text-align:center;padding:18px 6px}
+.form-ok .ok-ic{width:56px;height:56px;border-radius:50%;background:#e9f3e6;color:#3c7a35;display:grid;place-items:center;margin:0 auto 12px;font-size:28px}
+.form-ok b{font-family:var(--serif);font-size:28px;display:block;margin-bottom:6px}
+.sent .form{display:none}.sent .form-ok{display:block}
+
+/* stats strip */
+.strip{background:var(--dark);color:#fff;padding:34px 0}
+.strip .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+@media(min-width:900px){.strip .wrap{grid-template-columns:repeat(5,1fr)}}
+.stat b{display:block;font-family:var(--serif);font-size:clamp(32px,4vw,46px);color:var(--gold-l);line-height:1}
+.stat span{font-size:14px;opacity:.75}
+
+/* about */
+.about{display:grid;gap:40px}
+@media(min-width:1024px){.about{grid-template-columns:1fr 1fr;align-items:center;gap:72px}}
+.about-img{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5}
+.about-img img{width:100%;height:100%;object-fit:cover}
+.quote{font-family:var(--serif);font-size:clamp(24px,2.6vw,32px);font-style:italic;line-height:1.25;border-left:2px solid var(--gold);padding-left:20px;margin:26px 0}
+.adv{display:grid;gap:16px;margin-top:64px}
+@media(min-width:640px){.adv{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.adv{grid-template-columns:repeat(3,1fr)}}
+.adv-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:transform .25s,box-shadow .25s}
+.adv-item:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.adv-ic{width:52px;height:52px;border-radius:14px;background:var(--bg-2);display:grid;place-items:center;margin-bottom:18px;color:var(--brick)}
+.adv-item h4{font-size:18px;margin-bottom:6px}
+.adv-item p{font-size:15px;color:var(--ink-2)}
+
+/* houses */
+.houses-sec{background:var(--bg-2)}
+.houses{display:grid;gap:16px}
+@media(min-width:640px){.houses{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.houses{grid-template-columns:repeat(3,1fr)}}
+.house{background:var(--card);border-radius:var(--radius);padding:28px;position:relative;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column}
+.house .num{position:absolute;right:20px;top:8px;font-family:var(--serif);font-size:84px;color:var(--bg-2);line-height:1}
+.house h3{position:relative;margin-bottom:10px}
+.house p{color:var(--ink-2);font-size:15px;flex:1;position:relative}
+.house .meta{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 14px}
+.house .meta span{font-size:13px;background:var(--bg);border-radius:999px;padding:5px 12px;font-weight:600}
+.house .link{font-weight:700;color:var(--brick);font-size:14px}
+.house .link:hover{text-decoration:underline}
+
+/* location */
+.loc{display:grid;gap:32px}
+@media(min-width:1024px){.loc{grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}}
+.loc-map{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;box-shadow:var(--shadow)}
+.loc-map img{width:100%;height:100%;object-fit:cover}
+.loc-map .pin{position:absolute;left:16px;bottom:16px;background:#fff;border-radius:14px;padding:12px 16px;font-size:14px;box-shadow:var(--shadow)}
+.loc-map .pin b{display:block;font-size:16px}
+.dist{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}
+.dist div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 14px}
+.dist b{font-family:var(--serif);font-size:30px;display:block;line-height:1;color:var(--brick)}
+.dist span{font-size:13px;color:var(--ink-2)}
+.near{list-style:none;display:grid;gap:10px;margin-bottom:28px}
+.near li{display:flex;gap:12px;align-items:flex-start;font-size:15px}
+.near li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:8px;flex:none}
+
+/* flats */
+.flats-sec{background:var(--dark);color:#fff}
+.flats-sec .lead{color:#d9cdc0}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:28px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;border:1px solid #ffffff3a;background:none;color:#fff;border-radius:999px;padding:11px 20px;font-weight:600;font-size:14px;cursor:pointer}
+.tab.on{background:var(--gold);border-color:var(--gold);color:var(--dark)}
+.flat{display:none;grid-template-columns:1fr;gap:28px;background:#2a201b;border-radius:24px;overflow:hidden}
+.flat.on{display:grid}
+@media(min-width:900px){.flat{grid-template-columns:1.1fr 1fr}}
+.flat-img{min-height:260px;background:#3a2c24}
+.flat-img img{width:100%;height:100%;object-fit:cover}
+.flat-body{padding:8px 24px 28px}
+@media(min-width:900px){.flat-body{padding:40px 40px 40px 0}}
+.flat-body h3{font-size:36px;margin-bottom:12px}
+.flat-body p{color:#d9cdc0;margin-bottom:22px}
+.kv{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:26px}
+.kv div{border:1px solid #ffffff22;border-radius:14px;padding:14px}
+.kv b{display:block;font-family:var(--serif);font-size:26px;color:var(--gold-l);line-height:1.1}
+.kv span{font-size:13px;color:#bfb2a5}
+.flat-ctas{display:flex;gap:10px;flex-wrap:wrap}
+.extras{display:grid;gap:14px;margin-top:40px}
+@media(min-width:768px){.extras{grid-template-columns:repeat(3,1fr)}}
+.extra{display:flex;gap:16px;align-items:center;background:#2a201b;border-radius:18px;padding:14px}
+.extra img{width:84px;height:84px;border-radius:12px;object-fit:cover;flex:none}
+.extra b{display:block;font-size:16px}
+.extra span{font-size:14px;color:#bfb2a5}
+
+/* quiz */
+.quiz{background:linear-gradient(135deg,var(--brick) 0%,#7d2a1b 100%);color:#fff;border-radius:28px;padding:32px 22px;display:grid;gap:28px;position:relative;overflow:hidden}
+@media(min-width:900px){.quiz{grid-template-columns:.9fr 1.1fr;padding:56px;align-items:center}}
+.quiz::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;border:1px solid #ffffff22;right:-120px;top:-160px;box-shadow:0 0 0 40px #ffffff08,0 0 0 80px #ffffff05}
+.quiz h2{color:#fff}
+.quiz p{opacity:.9}
+.qbox{background:#fff;color:var(--ink);border-radius:22px;padding:24px;position:relative;z-index:1}
+.qstep{display:none}.qstep.on{display:block}
+.qprog{height:4px;background:var(--bg-2);border-radius:4px;margin-bottom:18px;overflow:hidden}
+.qprog i{display:block;height:100%;background:var(--gold);width:25%;transition:width .3s}
+.qtitle{font-weight:700;font-size:18px;margin-bottom:14px}
+.opts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.opt{border:1px solid var(--line);background:var(--bg);border-radius:14px;padding:14px;text-align:left;cursor:pointer;font-weight:600;font-size:15px;transition:border .2s,background .2s}
+.opt:hover{border-color:var(--gold)}
+.opt.on{background:#fbf1de;border-color:var(--gold)}
+.qnav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;font-size:13px;color:var(--muted)}
+.qback{background:none;border:0;cursor:pointer;color:var(--muted);text-decoration:underline}
+
+/* tech */
+.tech{display:grid;gap:40px}
+@media(min-width:1024px){.tech{grid-template-columns:1fr 1fr;gap:64px;align-items:center}}
+.wall{display:grid;gap:10px}
+.layer{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.layer i{width:12px;align-self:stretch;border-radius:6px;flex:none}
+.layer b{font-family:var(--serif);font-size:26px;min-width:84px;color:var(--brick)}
+.layer span{font-size:15px;color:var(--ink-2)}
+.checks{list-style:none;display:grid;gap:12px;margin-top:22px}
+.checks li{padding-left:30px;position:relative;font-size:15px;color:var(--ink-2)}
+.checks li::before{content:"✓";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--bg-2);color:var(--brick);font-size:12px;display:grid;place-items:center;font-weight:700}
+
+/* gallery */
+.gal{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+@media(max-width:899px){.gal a:first-child{grid-column:span 2;aspect-ratio:16/10}}
+@media(min-width:900px){.gal{grid-template-columns:2fr 1fr 1fr;grid-template-rows:240px 240px}.gal a:first-child{grid-row:span 2}}
+.gal a{border-radius:16px;overflow:hidden;position:relative;min-height:150px;background:var(--bg-2)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gal a:hover img{transform:scale(1.05)}
+.yard-note{margin-top:22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;color:var(--ink-2);font-size:15px}
+
+/* progress */
+.prog-sec{background:var(--bg-2)}
+.queues{display:grid;gap:14px;margin-bottom:44px}
+@media(min-width:640px){.queues{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.queues{grid-template-columns:repeat(4,1fr)}}
+.q{background:var(--card);border-radius:var(--radius);padding:24px;border:1px solid var(--line)}
+.q .qh{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.q .qh b{font-family:var(--serif);font-size:26px}
+.q .st{font-size:13px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--bg-2)}
+.q .st.done{background:#e3efdf;color:#356a2e}
+.q .bar{height:6px;background:var(--bg-2);border-radius:6px;margin:14px 0 16px;overflow:hidden}
+.q .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--brick));border-radius:6px}
+.q dl{display:grid;grid-template-columns:1fr auto;gap:6px 10px;font-size:14px}
+.q dt{color:var(--muted)}.q dd{font-weight:600;text-align:right}
+.diary{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:thin}
+.dcard{flex:0 0 72%;scroll-snap-align:start;border-radius:16px;overflow:hidden;position:relative;aspect-ratio:9/10;background:#ccc}
+@media(min-width:640px){.dcard{flex-basis:38%}}
+@media(min-width:1024px){.dcard{flex-basis:calc((100% - 56px)/5)}}
+.dcard img{width:100%;height:100%;object-fit:cover}
+.dcard span{position:absolute;left:10px;bottom:10px;background:#fff;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:700}
+
+/* buy */
+.buy{display:grid;gap:16px}
+@media(min-width:640px){.buy{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.buy{grid-template-columns:repeat(4,1fr)}}
+.bcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:10px}
+.bcard .big{font-family:var(--serif);font-size:44px;line-height:1;color:var(--brick)}
+.bcard h4{font-size:18px}
+.bcard p{font-size:14px;color:var(--ink-2);flex:1}
+.bcard .link{font-weight:700;color:var(--brick);font-size:14px;cursor:pointer;background:none;border:0;text-align:left;padding:0}
+.calc{margin-top:28px;background:var(--dark);color:#fff;border-radius:24px;padding:28px 22px;display:grid;gap:28px}
+@media(min-width:900px){.calc{grid-template-columns:1.2fr 1fr;padding:44px}}
+.rng{margin-bottom:20px}
+.rng label{display:flex;justify-content:space-between;font-size:14px;color:#cdbfb1;margin-bottom:8px}
+.rng label b{color:#fff;font-size:16px}
+.rng input{width:100%;accent-color:var(--gold)}
+.calc-res{background:#2a201b;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:6px}
+.calc-res .pay{font-family:var(--serif);font-size:48px;color:var(--gold-l);line-height:1}
+.calc-res small{color:#a99a8c;font-size:12px}
+
+/* view */
+.view{display:grid;gap:16px}
+@media(min-width:900px){.view{grid-template-columns:1fr 1fr}}
+.vcard{border-radius:24px;padding:32px 24px;position:relative;overflow:hidden;min-height:400px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff}
+@media(min-width:900px){.vcard{padding:44px}}
+.vcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vcard::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,12,8,.15) 0%,rgba(20,12,8,.6) 40%,rgba(20,12,8,.92) 100%)}
+.vcard>*:not(img){position:relative;z-index:1}
+.vcard h3{font-size:36px;margin-bottom:8px}
+.vcard p{opacity:.9;margin-bottom:20px;max-width:440px}
+
+/* dev */
+.dev{display:grid;gap:40px}
+@media(min-width:1024px){.dev{grid-template-columns:1fr 1.2fr;gap:64px;align-items:center}}
+.dev-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dev-stats div{border-top:2px solid var(--brick);padding-top:14px}
+.dev-stats b{font-family:var(--serif);font-size:clamp(34px,4vw,52px);display:block;line-height:1}
+.dev-stats span{font-size:13px;color:var(--ink-2)}
+
+/* faq */
+.faq{max-width:860px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 44px 22px 0;font-weight:600;font-size:18px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:16px;font-size:28px;color:var(--brick);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--ink-2)}
+
+/* final */
+.final{position:relative;color:#fff;overflow:hidden}
+.final>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.final::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,12,8,.9),rgba(20,12,8,.55))}
+.final .wrap{position:relative;z-index:1;display:grid;gap:32px}
+@media(min-width:1024px){.final .wrap{grid-template-columns:1.2fr .9fr;align-items:center}}
+.final .lead{color:#e5dacd}
+.final-card{background:var(--card);color:var(--ink);border-radius:24px;padding:28px}
+.contacts-line{display:flex;flex-wrap:wrap;gap:24px;margin-top:28px;font-size:15px}
+.contacts-line b{display:block;font-size:20px}
+
+/* footer */
+footer{background:#140e0b;color:#bfb2a5;padding:56px 0 110px;font-size:14px}
+@media(min-width:900px){footer{padding-bottom:56px}}
+.fgrid{display:grid;gap:32px}
+@media(min-width:900px){.fgrid{grid-template-columns:1.3fr 1fr 1fr 1fr}}
+footer h5{color:#fff;font-size:14px;margin-bottom:12px;letter-spacing:.06em;text-transform:uppercase}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a:hover{color:var(--gold-l)}
+.legal{border-top:1px solid #ffffff1a;margin-top:40px;padding-top:24px;font-size:12px;color:#8a7d72;display:grid;gap:8px}
+
+/* floating */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1.4fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(247,242,234,.96);backdrop-filter:blur(10px);box-shadow:0 -8px 24px -12px rgba(0,0,0,.25);transform:translateY(110%);transition:transform .3s}
+.mbar.show{transform:none}
+.mbar .btn{padding:14px 10px}
+@media(min-width:900px){.mbar{display:none}}
+.fab{position:fixed;right:24px;bottom:24px;z-index:40;display:none;width:64px;height:64px;border-radius:50%;background:var(--brick);color:#fff;border:0;cursor:pointer;box-shadow:0 14px 34px -10px rgba(166,63,43,.8);place-items:center}
+.fab::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--brick);animation:pulse 2.2s infinite}
+@keyframes pulse{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+.fab-tip{position:absolute;right:76px;top:50%;transform:translateY(-50%);background:var(--dark);color:#fff;font-size:13px;padding:8px 12px;border-radius:10px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s}
+.fab:hover .fab-tip{opacity:1}
+@media(min-width:900px){.fab{display:grid}}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(20,12,8,.6);backdrop-filter:blur(4px)}
+.modal.open{display:flex}
+.mbox{background:var(--card);border-radius:24px;padding:32px 24px;width:100%;max-width:440px;position:relative;animation:pop .25s ease;max-height:calc(100svh - 32px);overflow:auto}
+@keyframes pop{from{transform:translateY(16px);opacity:0}}
+.mbox h3{font-size:32px;margin-bottom:6px;padding-right:30px}
+.mbox>p{color:var(--ink-2);font-size:15px;margin-bottom:18px}
+.mclose{position:absolute;right:14px;top:14px;width:40px;height:40px;border-radius:50%;border:0;background:var(--bg-2);font-size:20px;cursor:pointer}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.fab::before{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="ЖК «Русское солнце»">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="8" fill="#c49a52"/><g stroke="#c49a52" stroke-width="2" stroke-linecap="round"><path d="M20 3v6M20 31v6M3 20h6M31 20h6M8 8l4 4M28 28l4 4M8 32l4-4M28 12l4-4"/></g></svg>
+      <span>Русское солнце<small>Стрижи · Новосибирск</small></span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#about">О проекте</a><a href="#location">Расположение</a><a href="#flats">Квартиры</a><a href="#progress">Ход строительства</a><a href="#buy">Покупка</a><a href="#faq">Вопросы</a>
+    </nav>
+    <a class="hdr-phone" href="tel:+73832487744">8 383 248-77-44</a>
+    <button class="btn btn-gold hdr-cta" data-modal="callback">Обратный звонок</button>
+    <button class="burger" aria-label="Меню" id="burger"><span></span></button>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" aria-hidden="true">
+  <button class="close" aria-label="Закрыть меню" id="mclose">×</button>
+  <a href="#about">О проекте</a><a href="#houses">Шесть домов</a><a href="#location">Расположение</a><a href="#flats">Квартиры</a><a href="#progress">Ход строительства</a><a href="#buy">Способы покупки</a><a href="#faq">Вопросы</a>
+  <a href="tel:+73832487744" style="font-family:var(--sans);font-size:20px;font-weight:700;margin-top:16px">8 383 248-77-44</a>
+  <button class="btn btn-gold" data-modal="callback">Заказать звонок</button>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="top">
+  <picture>
+    <source media="(max-width: 767px)" srcset="https://strizhi.ru/upload/iblock/b49/cwmc84r27r0wrbct267v1k00f30rcqfu.jpg">
+    <img src="https://strizhi.ru/upload/iblock/1e2/uqmivrny6rc1sflov17bq6s6w576bxfr.jpg" alt="ЖК «Русское солнце» — визуализация домов на закате" fetchpriority="high">
+  </picture>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" style="color:var(--gold-l)">Заельцовский район · ул. Плановая, 60</span>
+      <h1 style="margin-top:14px">Русское <em>солнце</em></h1>
+      <p class="tag">Шесть кирпичных домов в неорусском стиле — респектабельно, национально, нарядно. В центральной части города, рядом с Дендропарком и Тимирязевским сквером.</p>
+      <div class="chips">
+        <span class="chip">Квартиры <b>от 6 990 000 ₽</b></span>
+        <span class="chip"><b>1,5 км</b> до м. «Заельцовская»</span>
+        <span class="chip">Отделка <b>White box</b></span>
+        <span class="chip">I очередь <b>сдана</b></span>
+      </div>
+      <div class="hero-ctas">
+        <a href="#flats" class="btn btn-primary">Выбрать квартиру</a>
+        <button class="btn btn-ghost" data-modal="view">Записаться на показ</button>
+      </div>
+    </div>
+    <div class="hero-form" data-form-wrap>
+      <span class="badge-sale">Ипотека от 5,99%</span>
+      <h3>Получите планировки и цены</h3>
+      <p>Пришлём актуальные свободные квартиры и подберём выгодный способ покупки.</p>
+      <form class="form" data-goal="hero">
+        <input class="field" name="name" placeholder="Ваше имя" autocomplete="name">
+        <input class="field" name="phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+        <button class="btn btn-primary btn-block" type="submit">Получить подборку</button>
+        <label class="agree"><input type="checkbox" checked required> <span>Даю согласие на обработку персональных данных и принимаю <a href="#">политику конфиденциальности</a></span></label>
+      </form>
+      <div class="form-ok"><div class="ok-ic">✓</div><b>Заявка отправлена</b>Менеджер перезвонит в рабочее время. Среднее время ожидания — 15 минут.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<div class="strip">
+  <div class="wrap">
+    <div class="stat"><b>6</b><span>уникальных домов</span></div>
+    <div class="stat"><b>29</b><span>этажей у башни «Колокольня»</span></div>
+    <div class="stat"><b>19,4–179,7</b><span>м² — площади квартир</span></div>
+    <div class="stat"><b>5,4 м</b><span>потолки в квартирах со вторым светом</span></div>
+    <div class="stat"><b>10 мин</b><span>до центра города</span></div>
+  </div>
+</div>
+
+<!-- About -->
+<section id="about">
+  <div class="wrap">
+    <div class="about">
+      <div class="rv">
+        <span class="eyebrow">О проекте</span>
+        <h2>Современная архитектура с национальными мотивами</h2>
+        <p class="lead">Источником вдохновения для архитекторов стали русский и неорусский стили XIX — начала XX века. Каждый из шести домов уникален, у каждого свой характер и своё имя.</p>
+        <p class="quote">«Солнце — источник света, тепла, центр притяжения»</p>
+        <p style="color:var(--ink-2);margin-bottom:28px">Красно-белая кирпичная полихромия, стрельчатые и арочные окна, угловые башенки и золотистая вершина 30-этажной «Колокольни» — высотной доминанты всего района.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <button class="btn btn-primary" data-modal="pres">Получить презентацию</button>
+          <a href="#houses" class="btn btn-ghost" style="color:var(--ink)">Смотреть дома</a>
+        </div>
+      </div>
+      <div class="about-img rv"><img src="https://strizhi.ru/upload/iblock/7be/wkq03oale0gs1v6f3klfwzxa60zmsfsx.jpg" alt="Фасад с арочными окнами" loading="lazy"></div>
+    </div>
+
+    <div class="adv">
+      <div class="adv-item rv"><div class="adv-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></div><h4>Кирпичные дома</h4><p>Монолитный каркас и многослойная кирпичная кладка: тёплые, тихие стены на десятилетия.</p></div>
+      <div class="adv-item rv"><div class="adv-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h4>Центр без суеты</h4><p>1,8 км до центра, но без плотной городской застройки — рядом сквер, Дендропарк и зоопарк.</p></div>
+      <div class="adv-item rv"><div class="adv-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18M12 3v18"/></svg></div><h4>Умные планировки</h4><p>Без лишних метров: при меньшей площади так же комфортно, как в больших квартирах.</p></div>
+      <div class="adv-item rv"><div class="adv-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></div><h4>Хайфлеты и второй свет</h4><p>Двухуровневые квартиры с потолком 5,4 м и окнами второго света в несколько десятков м².</p></div>
+      <div class="adv-item rv"><div class="adv-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="20" height="12" rx="2"/><path d="M6 7V5h12v2M7 19v2M17 19v2"/></svg></div><h4>Паркинг и кладовые</h4><p>Подземный паркинг, кладовые от 1,5 до 16 м², коммерция на первых этажах.</p></div>
+      <div class="adv-item rv"><div class="adv-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h4>Приложение «Стрижи. Сервис»</h4><p>Домофон, камеры, умный дом и связь с управляющей компанией — в телефоне.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Houses -->
+<section class="houses-sec" id="houses">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="eyebrow">Шесть домов</span><h2>У каждого дома — своё имя</h2></div>
+      <p class="lead" style="max-width:420px">Комплекс задуман как симфония: от «увертюры» до высотной доминанты.</p>
+    </div>
+    <div class="houses">
+      <article class="house rv"><span class="num">01</span><h3>«Колокольня»</h3><p>Белая башня с золотистой вершиной — силуэт многоярусной колокольни в современном объёме. Высотная доминанта района.</p><div class="meta"><span>29 этажей</span><span>в продаже: 131 кв.</span></div><a href="#" class="link" data-modal="flat" data-ctx="«Колокольня»">Квартиры в доме →</a></article>
+      <article class="house rv"><span class="num">02</span><h3>«Теремной»</h3><p>Угловая кирпичная башенка и красно-белая полихромия по образу Теремного дворца. На первых этажах — аркада торговой галереи.</p><div class="meta"><span>8 этажей</span><span>в продаже: 32 кв.</span></div><a href="#" class="link" data-modal="flat" data-ctx="«Теремной»">Квартиры в доме →</a></article>
+      <article class="house rv"><span class="num">03</span><h3>«Ларец»</h3><p>Небольшой «золотой» дом в сердцевине проекта — спрятанная от посторонних глаз сокровищница с авангардным характером.</p><div class="meta"><span>8 этажей</span><span>в продаже: 23 кв.</span></div><a href="#" class="link" data-modal="flat" data-ctx="«Ларец»">Квартиры в доме →</a></article>
+      <article class="house rv"><span class="num">04</span><h3>«Красные ворота»</h3><p>Арочные элементы из красного и чёрного кирпича — отсылка к триумфальной арке старой Москвы. Стоит во внутреннем дворе.</p><div class="meta"><span>15 этажей</span><span>в продаже: 29 кв.</span></div><a href="#" class="link" data-modal="flat" data-ctx="«Красные ворота»">Квартиры в доме →</a></article>
+      <article class="house rv"><span class="num">05</span><h3>«Зимний»</h3><p>Самый камерный: светлый кирпич, стрельчатые окна, фасад к тихой улице. Для неспешной жизни в кругу близких.</p><div class="meta"><span>9 этажей</span><span>в продаже: 15 кв.</span></div><a href="#" class="link" data-modal="flat" data-ctx="«Зимний»">Квартиры в доме →</a></article>
+      <article class="house rv"><span class="num">06</span><h3>«Застава»</h3><p>«Сказочная» башенка и бело-красная гамма на тихой границе комплекса — начало проекта, его первая часть.</p><div class="meta"><span>16 этажей</span><span>сдан</span><span>в продаже: 42 кв.</span></div><a href="#" class="link" data-modal="flat" data-ctx="«Застава»">Квартиры в доме →</a></article>
+    </div>
+  </div>
+</section>
+
+<!-- Location -->
+<section id="location">
+  <div class="wrap">
+    <div class="loc">
+      <div class="loc-map rv">
+        <img src="https://strizhi.ru/upload/iblock/373/33fjp980kp5q63hqs0t0yzoy11okgvjm.jpg" alt="Генплан ЖК «Русское солнце» с высоты" loading="lazy">
+        <div class="pin"><b>ул. Плановая, 60</b>Заельцовский район, Новосибирск</div>
+      </div>
+      <div class="rv">
+        <span class="eyebrow">Расположение</span>
+        <h2>Центр города и зелень за поворотом</h2>
+        <p class="lead">Удобный выезд на три магистрали — Плановую, Жуковского и Дуси Ковальчук. А дальше начинаются дачные шоссе к зелёным предместьям.</p>
+        <div class="dist">
+          <div><b>1,5 км</b><span>до м. «Заельцовская» и пл. Калинина</span></div>
+          <div><b>10 мин</b><span>до центра города</span></div>
+          <div><b>12</b><span>маршрутов транспорта</span></div>
+        </div>
+        <ul class="near">
+          <li>Тимирязевский сквер — буквально за поворотом</li>
+          <li>Дендрологический парк и Новосибирский зоопарк — через дорогу</li>
+          <li>Три школы, три детских сада, медучреждения, банки, супермаркеты</li>
+          <li>Гастрономический магазин «Бахетле» — в 600 метрах</li>
+          <li>Собственные магазины и сервисы на первых этажах комплекса</li>
+        </ul>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <button class="btn btn-primary" data-modal="view">Записаться на экскурсию</button>
+          <a href="#" class="btn btn-ghost" style="color:var(--ink)">Открыть на карте</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Flats -->
+<section class="flats-sec" id="flats">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="eyebrow" style="color:var(--gold-l)">Квартиры</span><h2>Пространство без лишних метров</h2></div>
+      <p class="lead" style="max-width:440px">Все квартиры сдаются с отделкой White box: остаётся выбрать пол и краску для стен.</p>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button class="tab on" data-tab="0">Компактные</button>
+      <button class="tab" data-tab="1">Семейные</button>
+      <button class="tab" data-tab="2">Двухуровневые</button>
+      <button class="tab" data-tab="3">Со вторым светом</button>
+      <button class="tab" data-tab="4">С гардеробными</button>
+    </div>
+
+    <div class="flat on">
+      <div class="flat-img"><img src="https://strizhi.ru/upload/iblock/6fa/t0akhtg3xb9dhd35374g97n5nfp9nnir.jpg" alt="Фасад дома с балконами" loading="lazy"></div>
+      <div class="flat-body"><h3>Компактные квартиры</h3><p>Функциональные планировки для старта, жизни в центре или инвестиций. Минимальная площадь в комплексе — 19,4 м² (I очередь).</p>
+        <div class="kv"><div><b>от 19,4 м²</b><span>площадь</span></div><div><b><span class="ph">цена по запросу</span></b><span>стоимость</span></div></div>
+        <div class="flat-ctas"><button class="btn btn-gold" data-modal="flat" data-ctx="Компактные квартиры">Узнать цены и планировки</button><button class="btn btn-ghost" data-modal="view">На просмотр</button></div></div>
+    </div>
+    <div class="flat">
+      <div class="flat-img"><img src="https://strizhi.ru/upload/iblock/d32/ixiytomxjdrxtboz4ak0ll1fnr676nqv.jpg" alt="Двор и фасады ЖК" loading="lazy"></div>
+      <div class="flat-body"><h3>Семейные квартиры</h3><p>Просторные квартиры для большой семьи: самые большие — до 179,7 м² (III очередь). Подходит семейная ипотека от 5,99%.</p>
+        <div class="kv"><div><b>до 179,7 м²</b><span>площадь</span></div><div><b><span class="ph">цена по запросу</span></b><span>стоимость</span></div></div>
+        <div class="flat-ctas"><button class="btn btn-gold" data-modal="flat" data-ctx="Семейные квартиры">Узнать цены и планировки</button><button class="btn btn-ghost" data-modal="mortgage">Рассчитать ипотеку</button></div></div>
+    </div>
+    <div class="flat">
+      <div class="flat-img"><img src="https://strizhi.ru/upload/iblock/1d6/ltc16ua9fvhjvsdirtde1f2lhb7u2ajf.jpg" alt="Интерьер двухуровневой квартиры" loading="lazy"></div>
+      <div class="flat-body"><h3>Двухуровневые хайфлеты</h3><p>Квартиры на двух уровнях с высотой потолка 5,4 метра — редкий формат для Новосибирска.</p>
+        <div class="kv"><div><b>5,4 м</b><span>высота потолка</span></div><div><b><span class="ph">площадь и цена — по запросу</span></b><span>уточнит менеджер</span></div></div>
+        <div class="flat-ctas"><button class="btn btn-gold" data-modal="flat" data-ctx="Двухуровневые квартиры">Узнать о наличии</button><button class="btn btn-ghost" data-modal="view">На просмотр</button></div></div>
+    </div>
+    <div class="flat">
+      <div class="flat-img"><img src="https://strizhi.ru/upload/iblock/3a6/38izk7hb0uqiew160eplfu6tppgws4n2.jpg" alt="Гостиная со вторым светом" loading="lazy"></div>
+      <div class="flat-body"><h3>Второй свет</h3><p>Гостиная с потолком 5,4 м и окнами второго света площадью в несколько десятков квадратных метров.</p>
+        <div class="kv"><div><b>5,4 м</b><span>потолок в гостиной</span></div><div><b><span class="ph">цена по запросу</span></b><span>стоимость</span></div></div>
+        <div class="flat-ctas"><button class="btn btn-gold" data-modal="flat" data-ctx="Квартиры со вторым светом">Узнать о наличии</button><button class="btn btn-ghost" data-modal="view">На просмотр</button></div></div>
+    </div>
+    <div class="flat">
+      <div class="flat-img"><img src="https://strizhi.ru/upload/iblock/694/1nlk5531zjsja4kteo2e7a96s769vgoq.webp" alt="Гардеробная комната" loading="lazy"></div>
+      <div class="flat-body"><h3>С гардеробными</h3><p>Квартиры с выделенной комнатой под гардеробную — порядок без лишних шкафов.</p>
+        <div class="kv"><div><b>отдельная</b><span>гардеробная комната</span></div><div><b><span class="ph">цена по запросу</span></b><span>стоимость</span></div></div>
+        <div class="flat-ctas"><button class="btn btn-gold" data-modal="flat" data-ctx="Квартиры с гардеробными">Узнать о наличии</button><button class="btn btn-ghost" data-modal="view">На просмотр</button></div></div>
+    </div>
+
+    <div class="extras">
+      <div class="extra"><img src="https://strizhi.ru/upload/iblock/eb2/qr0q4ug0a39pwzqec4f9c5sc30ag4l8e.webp" alt="Подземный паркинг" loading="lazy"><div><b>Подземный паркинг</b><span>Безопасное хранение авто</span></div></div>
+      <div class="extra"><img src="https://strizhi.ru/upload/iblock/ff6/g83grgc5vg5s38581pwh525ml5s2g2e4.webp" alt="Кладовая" loading="lazy"><div><b>Кладовые</b><span>от 1,5 до 16 м²</span></div></div>
+      <div class="extra"><img src="https://strizhi.ru/upload/iblock/cba/brk1z9eqwhnrcy4f0dz7nkam885y14nm.webp" alt="Коммерческое помещение" loading="lazy"><div><b>Коммерческие помещения</b><span>от 22,8 до 471,8 м²</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Quiz -->
+<section id="quiz" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="quiz rv">
+      <div>
+        <span class="eyebrow" style="color:var(--gold-l)">Подбор за 1 минуту</span>
+        <h2>Подберём квартиру под ваш бюджет</h2>
+        <p>Ответьте на 3 вопроса — менеджер пришлёт подходящие варианты с планировками и расчётом платежа.</p>
+      </div>
+      <div class="qbox" data-form-wrap>
+        <div class="qprog"><i id="qbar"></i></div>
+        <div class="qstep on" data-q="0"><div class="qtitle">Сколько комнат нужно?</div><div class="opts"><button class="opt">Студия / 1</button><button class="opt">2 комнаты</button><button class="opt">3 комнаты</button><button class="opt">4+ / хайфлет</button></div></div>
+        <div class="qstep" data-q="1"><div class="qtitle">Когда планируете переезд?</div><div class="opts"><button class="opt">В сданный дом</button><button class="opt">В течение года</button><button class="opt">1–2 года</button><button class="opt">Пока выбираю</button></div></div>
+        <div class="qstep" data-q="2"><div class="qtitle">Как планируете покупать?</div><div class="opts"><button class="opt">Семейная ипотека</button><button class="opt">IT-ипотека</button><button class="opt">Рассрочка</button><button class="opt">Наличные / трейд-ин</button></div></div>
+        <div class="qstep" data-q="3"><div class="qtitle">Куда отправить подборку?</div>
+          <form class="form" data-goal="quiz">
+            <input class="field" name="name" placeholder="Ваше имя" autocomplete="name">
+            <input class="field" name="phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+            <button class="btn btn-primary btn-block" type="submit">Получить подборку</button>
+            <label class="agree"><input type="checkbox" checked required> <span>Согласен на обработку <a href="#">персональных данных</a></span></label>
+          </form>
+          <div class="form-ok"><div class="ok-ic">✓</div><b>Заявка отправлена</b>Подборка будет готова в течение рабочего дня.</div>
+        </div>
+        <div class="qnav"><button class="qback" id="qback" style="visibility:hidden">← Назад</button><span id="qnum">Вопрос 1 из 3</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tech -->
+<section id="tech">
+  <div class="wrap">
+    <div class="tech">
+      <div class="rv">
+        <span class="eyebrow">Технологии</span>
+        <h2>Тёплая стена из трёх слоёв</h2>
+        <p class="lead">Монолитный каркас с кирпичным заполнением. Межквартирные стены и перегородки — тоже кирпич.</p>
+        <ul class="checks">
+          <li>White box: стяжка под чистовое покрытие, гипсовая штукатурка стен</li>
+          <li>Пятикамерные ПВХ-окна, оштукатуренные откосы</li>
+          <li>Утеплённая металлическая входная дверь с двумя замками</li>
+          <li>Счётчики воды и электроэнергии в каждой квартире</li>
+          <li>Межквартирные стены — кирпич 250 мм со штукатуркой</li>
+        </ul>
+      </div>
+      <div class="wall rv">
+        <div class="layer"><i style="background:#c4553b"></i><b>120 мм</b><span>наружный слой — облицовочный кирпич</span></div>
+        <div class="layer"><i style="background:#e8cf98"></i><b>150 мм</b><span>утеплитель ППС-14 с противопожарными рассечками</span></div>
+        <div class="layer"><i style="background:#8c3a29"></i><b>250 мм</b><span>внутренний слой — полнотелый кирпич</span></div>
+        <button class="btn btn-primary" data-modal="view" style="margin-top:12px">Посмотреть отделку вживую</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery / yard -->
+<section id="yard" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="eyebrow">Двор и архитектура</span><h2>Красота в каждой детали</h2></div>
+      <button class="btn btn-ghost" style="color:var(--ink)" data-modal="pres">Получить все визуализации</button>
+    </div>
+    <div class="gal rv">
+      <a href="#"><img src="https://strizhi.ru/upload/iblock/96c/i4v5bjutwkxqwhccf73e30i3zxk8bexd.jpg" alt="Арка и двор комплекса" loading="lazy"></a>
+      <a href="#"><img src="https://strizhi.ru/upload/iblock/d32/ixiytomxjdrxtboz4ak0ll1fnr676nqv.jpg" alt="Фасады домов" loading="lazy"></a>
+      <a href="#"><img src="https://strizhi.ru/upload/iblock/ab4/jf8lvfno7kk51elw9lbpww6t7x9dz9yy.jpg" alt="Фасад с золотистыми элементами" loading="lazy"></a>
+      <a href="#"><img src="https://strizhi.ru/upload/iblock/7be/wkq03oale0gs1v6f3klfwzxa60zmsfsx.jpg" alt="Арочные окна" loading="lazy"></a>
+      <a href="#"><img src="https://strizhi.ru/upload/iblock/6fa/t0akhtg3xb9dhd35374g97n5nfp9nnir.jpg" alt="Кирпичный фасад" loading="lazy"></a>
+    </div>
+    <div class="yard-note rv">
+      <span>Благоустройство двора:</span>
+      <span class="ph">описание двора, детских и спортивных площадок — уточнить у застройщика</span>
+    </div>
+  </div>
+</section>
+
+<!-- Progress -->
+<section class="prog-sec" id="progress">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="eyebrow">Ход строительства</span><h2>Строим по графику</h2></div>
+      <p class="lead" style="max-width:420px">Четыре очереди. Первая уже сдана — можно приехать и увидеть качество своими глазами.</p>
+    </div>
+    <div class="queues">
+      <div class="q rv"><div class="qh"><b>I очередь</b><span class="st done">сдана</span></div><div class="bar"><i style="width:100%"></i></div><dl><dt>Домов</dt><dd>1</dd><dt>Этажей</dt><dd>9–16</dd><dt>Квартир</dt><dd>173</dd><dt>Площади</dt><dd>19,4–146,1 м²</dd></dl></div>
+      <div class="q rv"><div class="qh"><b>II очередь</b><span class="st">II кв. 2026</span></div><div class="bar"><i style="width:100%"></i></div><dl><dt>Домов</dt><dd>2</dd><dt>Этажей</dt><dd>9–15</dd><dt>Квартир</dt><dd>119</dd><dt>Площади</dt><dd>38,5–152,9 м²</dd></dl></div>
+      <div class="q rv"><div class="qh"><b>III очередь</b><span class="st">III кв. 2026</span></div><div class="bar"><i style="width:100%"></i></div><dl><dt>Домов</dt><dd>2</dd><dt>Этажей</dt><dd>6–8</dd><dt>Квартир</dt><dd>117</dd><dt>Площади</dt><dd>26,9–179,7 м²</dd></dl></div>
+      <div class="q rv"><div class="qh"><b>IV очередь</b><span class="st">IV кв. 2027</span></div><div class="bar"><i style="width:96%"></i></div><dl><dt>Домов</dt><dd>1</dd><dt>Этажей</dt><dd>29</dd><dt>Квартир</dt><dd>212</dd><dt>Площади</dt><dd>40,5–122,7 м²</dd></dl></div>
+    </div>
+    <h3 class="rv" style="margin-bottom:18px">Дневник стройки</h3>
+    <div class="diary rv">
+      <a href="#" class="dcard"><img src="https://strizhi.ru/upload/iblock/59d/4bt35eteymh9v1fpdzm5fo38nbzzpbzy.jpeg" alt="Стройка, май 2026" loading="lazy"><span>Май 2026</span></a>
+      <a href="#" class="dcard"><img src="https://strizhi.ru/upload/iblock/e42/ngie1nd4aqe42ss6z8ya8xn3s4n5eir0.png" alt="Стройка, апрель 2026" loading="lazy"><span>Апрель 2026</span></a>
+      <a href="#" class="dcard"><img src="https://strizhi.ru/upload/iblock/e63/63inc7yh1grvjey0q7f1ysvydgn4zb8f.png" alt="Стройка, март 2026" loading="lazy"><span>Март 2026</span></a>
+      <a href="#" class="dcard"><img src="https://strizhi.ru/upload/iblock/25f/uk230c2y0j4q7cah42z35g9ewjeyt5ot.jpg" alt="Стройка, сентябрь 2025" loading="lazy"><span>Сентябрь 2025</span></a>
+      <a href="#" class="dcard"><img src="https://strizhi.ru/upload/iblock/963/yz7rba3qyd6djl86ikohhyfhq4kpg5ic.jpg" alt="Стройка, август 2025" loading="lazy"><span>Август 2025</span></a>
+      <a href="#" class="dcard"><img src="https://strizhi.ru/upload/iblock/750/28n6iu4xxyax2g629rxdw249oavbvpbd.jpeg" alt="Стройка, май 2025" loading="lazy"><span>Май 2025</span></a>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px">
+      <button class="btn btn-primary" data-modal="view">Онлайн-показ стройки</button>
+      <a href="#" class="btn btn-ghost" style="color:var(--ink)">Документы и проектные декларации</a>
+    </div>
+  </div>
+</section>
+
+<!-- Buy -->
+<section id="buy">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="eyebrow">Способы покупки</span><h2>Выберите удобный способ</h2></div>
+      <p class="lead" style="max-width:420px">Поможем с одобрением и проведём сделку полностью онлайн — даже из другого города.</p>
+    </div>
+    <div class="buy">
+      <div class="bcard rv"><span class="big">5,99%</span><h4>Семейная ипотека</h4><p>Ставка от 5,99%. Для семей, где есть ребёнок до 7 лет включительно.</p><button class="link" data-modal="mortgage" data-ctx="Семейная ипотека">Узнать условия →</button></div>
+      <div class="bcard rv"><span class="big">5,99%</span><h4>IT-ипотека</h4><p>Ставка от 5,99% для сотрудников аккредитованных IT-компаний.</p><button class="link" data-modal="mortgage" data-ctx="IT-ипотека">Узнать условия →</button></div>
+      <div class="bcard rv"><span class="big">300 000 ₽</span><h4>Рассрочка от застройщика</h4><p>Первый взнос — от 300 000 ₽. <span class="ph">срок и условия — уточнить</span></p><button class="link" data-modal="mortgage" data-ctx="Рассрочка">Рассчитать рассрочку →</button></div>
+      <div class="bcard rv"><span class="big">Онлайн</span><h4>Сделка и трейд-ин</h4><p>Полный цикл покупки дистанционно — от выбора квартиры до регистрации. Возможен трейд-ин.</p><button class="link" data-modal="callback" data-ctx="Онлайн-сделка / трейд-ин">Получить консультацию →</button></div>
+    </div>
+
+    <div class="calc rv">
+      <div>
+        <h3 style="font-size:34px;margin-bottom:22px">Калькулятор платежа</h3>
+        <div class="rng"><label>Стоимость квартиры <b id="vP"></b></label><input type="range" id="cP" min="6990000" max="30000000" step="10000" value="8500000"></div>
+        <div class="rng"><label>Первоначальный взнос <b id="vD"></b></label><input type="range" id="cD" min="20" max="80" step="1" value="20"></div>
+        <div class="rng"><label>Срок <b id="vT"></b></label><input type="range" id="cT" min="5" max="30" step="1" value="30"></div>
+        <div class="rng" style="margin-bottom:0"><label>Ставка <b>5,99%</b></label></div>
+      </div>
+      <div class="calc-res">
+        <span style="color:#cdbfb1;font-size:14px">Ежемесячный платёж от</span>
+        <span class="pay" id="vPay"></span>
+        <small>Расчёт примерный и не является офертой. Итоговые условия зависят от банка и программы.</small>
+        <button class="btn btn-gold btn-block" style="margin-top:14px" data-modal="mortgage" data-ctx="Калькулятор">Получить одобрение</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Viewing -->
+<section id="view" style="padding-top:0">
+  <div class="wrap">
+    <div class="view">
+      <div class="vcard rv"><img src="https://strizhi.ru/upload/iblock/c48/bp0y2neyd8a3lw1w7bdv7psk2kehfygo.jpeg" alt="Сданный дом комплекса" loading="lazy"><span class="eyebrow" style="color:var(--gold-l)">Лично</span><h3>Индивидуальный показ</h3><p>Покажем дома, квартиры и дворы. Подберём время, которое удобно вам.</p><div><button class="btn btn-gold" data-modal="view" data-ctx="Показ на месте">Записаться на показ</button></div></div>
+      <div class="vcard rv"><img src="https://strizhi.ru/upload/iblock/26d/w77lmdco4fkgwypm4tm6a6tby0fp0z7n.jpg" alt="Комплекс с высоты" loading="lazy"><span class="eyebrow" style="color:var(--gold-l)">Онлайн</span><h3>Показ по видеосвязи</h3><p>Позвоним в удобном мессенджере и покажем всё, что увидели бы вживую. Плюс 23 HD-камеры на объекте.</p><div><button class="btn btn-light" data-modal="view" data-ctx="Онлайн-показ">Записаться онлайн</button></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Developer -->
+<section class="houses-sec" id="developer">
+  <div class="wrap">
+    <div class="dev">
+      <div class="rv">
+        <span class="eyebrow">О застройщике</span>
+        <h2>«Стрижи» — арт-девелопмент</h2>
+        <p class="lead">Строим кирпичные дома с характером и гордимся каждой деталью. «Русское солнце» — проект, единственный в городе по своей архитектуре.</p>
+        <a href="#" class="btn btn-ghost" style="color:var(--ink);margin-top:24px">Подробнее о компании</a>
+      </div>
+      <div class="dev-stats rv">
+        <div><b>12</b><span>лет работы</span></div>
+        <div><b>107</b><span>кирпичных домов введено</span></div>
+        <div><b>580 000</b><span>м² введено в эксплуатацию</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <span class="eyebrow">Вопросы и ответы</span>
+    <h2 style="margin-bottom:32px">Частые вопросы</h2>
+    <div class="faq">
+      <details open><summary>Когда сдаются дома?</summary><p>I очередь сдана. Срок сдачи II очереди — II квартал 2026, III очереди — III квартал 2026, IV очереди (29-этажная «Колокольня») — IV квартал 2027. Актуальный статус уточняйте у менеджера.</p></details>
+      <details><summary>С какой отделкой сдаются квартиры?</summary><p>Все квартиры — White box: стяжка пола готова к укладке покрытия, стены оштукатурены, установлены счётчики, входная дверь и пятикамерные окна.</p></details>
+      <details><summary>Сколько стоят квартиры?</summary><p>Квартиры — от 6 990 000 ₽. Цена зависит от дома, этажа и планировки; оставьте заявку, и мы пришлём актуальный прайс со свободными квартирами.</p></details>
+      <details><summary>Можно ли купить в ипотеку или рассрочку?</summary><p>Да: семейная и IT-ипотека от 5,99%, рассрочка от застройщика с первым взносом от 300 000 ₽. Также доступны трейд-ин и полностью онлайн-сделка.</p></details>
+      <details><summary>Есть ли паркинг и кладовые?</summary><p>Да, в комплексе предусмотрен подземный паркинг и кладовые площадью от 1,5 до 16 м².</p></details>
+      <details><summary>Как посмотреть квартиру, если я не в Новосибирске?</summary><p>Запишитесь на онлайн-показ: менеджер позвонит по видеосвязи и покажет дом и квартиру. Сделку можно провести дистанционно.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- Final -->
+<section class="final" id="contacts">
+  <img src="https://strizhi.ru/upload/iblock/96c/i4v5bjutwkxqwhccf73e30i3zxk8bexd.jpg" alt="" loading="lazy">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow" style="color:var(--gold-l)">Остались вопросы?</span>
+      <h2>Подберём квартиру в «Русском солнце»</h2>
+      <p class="lead">Оставьте телефон — расскажем о свободных квартирах, условиях ипотеки и запишем на показ.</p>
+      <div class="contacts-line">
+        <div><span style="opacity:.7">Телефон</span><b><a href="tel:+73832487744">8 383 248-77-44</a></b></div>
+        <div><span style="opacity:.7">Режим работы</span><b>Пн–Пт 9–20, Сб–Вс 9–18</b></div>
+      </div>
+    </div>
+    <div class="final-card rv" data-form-wrap>
+      <h3 style="font-size:30px;margin-bottom:16px">Получить консультацию</h3>
+      <form class="form" data-goal="final">
+        <input class="field" name="name" placeholder="Ваше имя" autocomplete="name">
+        <input class="field" name="phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+        <button class="btn btn-primary btn-block" type="submit">Жду звонка</button>
+        <label class="agree"><input type="checkbox" checked required> <span>Даю согласие на обработку <a href="#">персональных данных</a></span></label>
+      </form>
+      <div class="form-ok"><div class="ok-ic">✓</div><b>Заявка отправлена</b>Перезвоним в рабочее время — в среднем за 15 минут.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a href="#top" class="logo" style="color:#fff;margin-bottom:14px"><span>Русское солнце<small>Стрижи · Новосибирск</small></span></a>
+        <p>ул. Плановая, 60, Заельцовский район</p>
+        <p style="margin-top:10px"><a href="tel:+73832487744" style="color:#fff;font-weight:700;font-size:18px">8 383 248-77-44</a></p>
+      </div>
+      <div><h5>Проект</h5><ul><li><a href="#about">О проекте</a></li><li><a href="#houses">Дома</a></li><li><a href="#location">Расположение</a></li><li><a href="#progress">Ход строительства</a></li></ul></div>
+      <div><h5>Покупка</h5><ul><li><a href="#">Ипотека</a></li><li><a href="#">Рассрочка</a></li><li><a href="#">Трейд-ин</a></li><li><a href="#">Паркинг и кладовые</a></li></ul></div>
+      <div><h5>Компания</h5><ul><li><a href="#">О застройщике</a></li><li><a href="#">Документы</a></li><li><a href="#">Контакты</a></li><li><a href="#">ВКонтакте</a> · <a href="#">Telegram</a></li></ul></div>
+    </div>
+    <div class="legal">
+      <p>Офис продаж: 630040, Новосибирск, ул. Кубовая, 112. Пн–Пт 9:00–20:00, Сб–Вс 9:00–18:00.</p>
+      <p>Застройщик ООО СЗ «Квартал». Проектная декларация на сайте <a href="#">наш.дом.рф</a>. Информация на сайте носит ознакомительный характер и не является публичной офертой. Визуализации могут отличаться от фактических проектных решений.</p>
+      <p><a href="#">Политика обработки персональных данных</a> · <a href="#">Согласие на обработку персональных данных</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating -->
+<div class="mbar" id="mbar">
+  <a href="tel:+73832487744" class="btn btn-ghost" style="color:var(--ink)">Позвонить</a>
+  <button class="btn btn-primary" data-modal="callback">Оставить заявку</button>
+</div>
+<button class="fab" data-modal="callback" aria-label="Заказать обратный звонок">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg>
+  <span class="fab-tip">Перезвоним за 15 минут</span>
+</button>
+
+<!-- Modal -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="mbox" data-form-wrap>
+    <button class="mclose" aria-label="Закрыть">×</button>
+    <h3 id="mTitle">Обратный звонок</h3>
+    <p id="mText">Оставьте контакты — менеджер перезвонит.</p>
+    <form class="form" data-goal="modal">
+      <input type="hidden" name="ctx" id="mCtx">
+      <input class="field" name="name" placeholder="Ваше имя" autocomplete="name">
+      <input class="field" name="phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+      <button class="btn btn-primary btn-block" type="submit" id="mBtn">Отправить</button>
+      <label class="agree"><input type="checkbox" checked required> <span>Даю согласие на обработку <a href="#">персональных данных</a></span></label>
+    </form>
+    <div class="form-ok"><div class="ok-ic">✓</div><b>Заявка отправлена</b>Менеджер свяжется с вами в рабочее время. Среднее время ожидания — 15 минут.</div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+
+  // header + floating bar
+  var hdr=$('#hdr'), mbar=$('#mbar');
+  function onScroll(){var y=window.scrollY;hdr.classList.toggle('solid',y>40);mbar.classList.toggle('show',y>window.innerHeight*.6)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // mobile menu
+  var mnav=$('#mnav');
+  function menu(o){mnav.classList.toggle('open',o);mnav.setAttribute('aria-hidden',!o);document.body.style.overflow=o?'hidden':''}
+  $('#burger').onclick=function(){menu(true)};$('#mclose').onclick=function(){menu(false)};
+  $$('a',mnav).forEach(function(a){a.addEventListener('click',function(){menu(false)})});
+
+  // modal
+  var modal=$('#modal'), box=$('.mbox',modal);
+  var presets={
+    callback:['Обратный звонок','Оставьте контакты — перезвоним в рабочее время, в среднем за 15 минут.','Жду звонка'],
+    view:['Запись на показ','Покажем дома и квартиры лично или по видеосвязи. Выберите удобное время с менеджером.','Записаться'],
+    flat:['Цены и планировки','Пришлём актуальные свободные квартиры с планировками и ценами.','Получить подборку'],
+    mortgage:['Расчёт ипотеки','Подберём программу и банк, рассчитаем платёж и поможем с одобрением.','Рассчитать'],
+    pres:['Презентация проекта','Пришлём презентацию «Русского солнца» с визуализациями и планировками.','Получить презентацию']
+  };
+  $$('[data-modal]').forEach(function(b){b.addEventListener('click',function(e){
+    e.preventDefault();menu(false);
+    var p=presets[b.dataset.modal]||presets.callback, ctx=b.dataset.ctx||'';
+    box.classList.remove('sent');$('form',box).reset();
+    $('#mTitle').textContent=p[0];$('#mText').textContent=p[1]+(ctx?' ('+ctx+')':'');$('#mBtn').textContent=p[2];$('#mCtx').value=b.dataset.modal+(ctx?': '+ctx:'');
+    modal.classList.add('open');document.body.style.overflow='hidden';
+    setTimeout(function(){var f=$('input[name=name]',box);f&&f.focus()},50);
+  })});
+  function closeModal(){modal.classList.remove('open');document.body.style.overflow=''}
+  $('.mclose',modal).onclick=closeModal;
+  modal.addEventListener('click',function(e){if(e.target===modal)closeModal()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal();menu(false)}});
+
+  // phone mask
+  function mask(v){var d=v.replace(/\D/g,'');if(d[0]==='8')d='7'+d.slice(1);if(d&&d[0]!=='7')d='7'+d;d=d.slice(0,11);
+    var o='+7';if(d.length>1)o+=' ('+d.slice(1,4);if(d.length>=4)o+=')';if(d.length>4)o+=' '+d.slice(4,7);if(d.length>7)o+='-'+d.slice(7,9);if(d.length>9)o+='-'+d.slice(9,11);return o}
+  $$('input[type=tel]').forEach(function(i){
+    i.addEventListener('input',function(){i.value=mask(i.value);i.classList.remove('err')});
+    i.addEventListener('focus',function(){if(!i.value)i.value='+7 '});
+    i.addEventListener('blur',function(){if(i.value.replace(/\D/g,'').length<=1)i.value=''});
+  });
+
+  // forms: stub submit — no backend
+  $$('form.form').forEach(function(f){f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var tel=$('input[type=tel]',f);
+    if(tel.value.replace(/\D/g,'').length<11){tel.classList.add('err');tel.focus();return}
+    var cb=$('input[type=checkbox]',f);if(cb&&!cb.checked){cb.focus();return}
+    f.closest('[data-form-wrap]').classList.add('sent');
+  })});
+
+  // flat tabs
+  var tabs=$$('.tab'), flats=$$('.flat');
+  tabs.forEach(function(t,i){t.onclick=function(){tabs.forEach(function(x){x.classList.remove('on')});flats.forEach(function(x){x.classList.remove('on')});t.classList.add('on');flats[i].classList.add('on')}});
+
+  // quiz
+  var steps=$$('.qstep'), cur=0, bar=$('#qbar'), back=$('#qback'), num=$('#qnum');
+  function go(n){cur=n;steps.forEach(function(s,i){s.classList.toggle('on',i===n)});bar.style.width=((n+1)*25)+'%';back.style.visibility=n>0&&n<3?'visible':'hidden';num.textContent=n<3?'Вопрос '+(n+1)+' из 3':'Последний шаг'}
+  steps.forEach(function(s,i){$$('.opt',s).forEach(function(o){o.onclick=function(){$$('.opt',s).forEach(function(x){x.classList.remove('on')});o.classList.add('on');setTimeout(function(){go(i+1)},220)}})});
+  back.onclick=function(){if(cur>0)go(cur-1)};
+
+  // calculator
+  var cP=$('#cP'),cD=$('#cD'),cT=$('#cT');
+  function rub(n){return Math.round(n).toLocaleString('ru-RU')+' ₽'}
+  function calc(){var P=+cP.value,D=+cD.value,T=+cT.value,S=P*(1-D/100),r=0.0599/12,n=T*12,m=S*r/(1-Math.pow(1+r,-n));
+    $('#vP').textContent=rub(P);$('#vD').textContent=D+'% · '+rub(P*D/100);$('#vT').textContent=T+' лет';$('#vPay').textContent=rub(m)}
+  [cP,cD,cT].forEach(function(i){i.addEventListener('input',calc)});calc();
+
+  // reveal on scroll
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    $$('.rv').forEach(function(el){io.observe(el)});
+  } else $$('.rv').forEach(function(el){el.classList.add('in')});
+})();
+</script>
+</body>
+</html>
